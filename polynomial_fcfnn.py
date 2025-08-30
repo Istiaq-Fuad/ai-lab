@@ -20,24 +20,23 @@ model = keras.Sequential(
 model.compile(optimizer="adam", loss="mse")
 
 
-history = model.fit(X, y, epochs=100, verbose=0)
+history = model.fit(X, y, epochs=200, verbose=0)
 
+y_pred = model.predict(X)
 
+plt.figure(figsize=(12, 5))
+
+plt.subplot(1, 2, 1)
 plt.plot(history.history["loss"])
 plt.xlabel("Epoch")
 plt.ylabel("MSE Loss")
 plt.title("Training Loss Curve")
-plt.savefig("loss_plot.png")
-plt.close()
 
-
-y_pred = model.predict(X)
-
+plt.subplot(1, 2, 2)
 plt.plot(X, y, label="Original f(x)")
 plt.plot(X, y_pred, label="Predicted f(x)", linestyle="dashed")
 plt.xlabel("x")
 plt.ylabel("f(x)")
 plt.title("Original vs Predicted Function")
 plt.legend()
-plt.savefig("fx_comparison.png")
-plt.close()
+plt.show()
