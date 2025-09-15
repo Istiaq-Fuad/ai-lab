@@ -11,6 +11,8 @@ wheels/
 
 # images
 *.png
+*.jpg
+*.jpeg
 
 # Jupyter Notebooks
 *.ipynb
