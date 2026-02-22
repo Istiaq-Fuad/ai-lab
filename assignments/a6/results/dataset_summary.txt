@@ -1,0 +1,6 @@
+Handwritten train samples: 80
+Handwritten test samples: 20
+MNIST train samples: 60000
+MNIST test samples: 10000
+Combined train samples: 60080
+Combined test samples: 10020
